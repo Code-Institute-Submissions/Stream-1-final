@@ -1,0 +1,22 @@
+{
+  "name": "stream-1-final",
+  "version": "1.0.0",
+  "description": "Stream 1 Final Project Angular.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "angular",
+    "js",
+    "stream-1",
+    "final",
+    "project"
+  ],
+  "author": "John Arnold",
+  "license": "ISC"
+}

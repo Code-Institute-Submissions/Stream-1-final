@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="stream1App" lang="en-GB" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>Apartment Brisas | Costa Blanca - Spain</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src='js/vendor/jquery1113.min.js'></script>
+        <script src='js/vendor/jquery.min.js'></script>
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/angular-route.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <meta name="description" content="Rent our 2 bedroom luxury Apartment Brisas for as little as £120 per week. Situated in a beautiful Spanish village. Exclusive use of a communal pool" />
+        <meta name="keywords" content="Apartment Brisas, Apartment Costa Blanca, Costa Blanca, Apartments in Costa Blanca, Apartment Hire, Spanish Apartment" />
+        <meta name="robots" content="all" />
+        <meta name="copyright" content="2016 Apartment Brisas. All rights reserved." />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+    </head>
+    <body>
+    <!--formsApp as defined in the app.js-->
+        <nav class="navbar navbar-inverse">
+        <!--html 5 nav bootstrap navbar -->
+            <div class="nav navbar-header">
+                <a class="navbar-brand" href="#/home">Apartment Brisas</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapsingList">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--responsive div to show hamburger menu-->
+            <div class="collapse navbar-collapse" id="myCollapsingList">
+            <a id="top"></a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/home">Home</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/about">Location</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Information <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <!--<li><a href="#/option1">Location</a></li>-->
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/activities">Activities</a></li>
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/prices">Prices</a></li>
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/availability">Availability</a></li>
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/weather">Weather</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+        
+        <div ng-view></div>
+        <!-- ng-view angular directive conpliments the ngRoute directive by including the template in the main view -->
+        <div class="container">
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div style="background-color: #E8E8EE;">
+                            <img class="img100" alt="Apartment Brisas Costa Blanca Location" src="/img/area-map.jpg" />
+                            <div style="text-align: center; padding: 1px; padding-bottom: 5px;">
+                                <h2>Location</h2>
+                                <p>Our Location, and Points of Interest Nearby</p>
+                                <a class="btn btn-primary" href="#/about">Take me there</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div style="background-color: #E8E8EE;">
+                            <img class="img100" alt="Apartment Brisas Costa Blanca Activities" src="/img/mountainbike.jpg" />
+                            <div style="text-align: center; padding: 1px; padding-bottom: 5px;">
+                                <h2>Activities</h2>
+                                <p>Popular activities in the Costa Blanca Area</p>
+                                <a class="btn btn-primary" href="#/activities">Take me there</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div style="background-color: #E8E8EE;">
+                            <img class="img100" alt="Apartment Brisas Costa Blanca Availability and Booking" src="/img/paella-large.jpg" />
+                            <div style="text-align: center; padding: 1px; padding-bottom: 5px;">
+                            <h2>Prices</h2>
+                                <p>From Just £120 per week<br /><br /></p>
+                                
+                                <a class="btn btn-primary" href="#/prices">Take me there</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div style="background-color: #E8E8EE;">
+                            <img class="img100" alt="Apartment Brisas Costa Blanca Prices" src="/img/peniscola_city.jpg" />
+                            <div style="text-align: center; padding: 1px; padding-bottom: 5px;">
+                                <h2>Availability</h2>
+                                <p>Availability and Booking Information</p>
+                                <a class="btn btn-primary" href="#/availability">Take me there</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--Navigation to main Pages-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+                    <h5>Contact: David Midgley<br />
+                    <a href="tel:+447903088101">+44 7903 088101</a></h5>
+                    <h5><a href="mailto:david@apartmentbrisas.co.uk" title="david@apartmentbrisas.co.uk" target="_blank" class="active" style="text-decoration: none;">david@apartmentbrisas.co.uk</a></h5></div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+                    <h5> Follow us</h5>
+                        <a href="https://www.facebook.com/ApartmentBrisas" target="_blank" title="Facebook" class="facebookr-follow-button" data-show-count="false"><img src="img/fac.png" width="35" height="35" title="Facebook" alt="facebook" /></a>
+                        <a href="https://twitter.com/ApartmentBrisas" target="_blank" title="Twitter" class="twitter-follow-button" data-show-count="false"><img src="img/twit.png" width="35" height="35" title="Twitter" alt="twitter" /></a>
+                        <a href="https://plus.google.com/104702473723959288394/about" rel="author" target="_blank" title="Google" class="googleplus-follow-button" data-show-count="false"><img src="img/goo.png" width="35" height="35" title="Google" alt="google plus" /></a><a href="https://pinterest.com/davidmidgley/apartment-brisas" target="_blank" title="Pintrest" class="pintrest-follow-button" data-show-count="false"><img src="img/pin.png" width="35" height="35" title="Pintrest" alt="pintrest" /></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Footer-->      
+    </body>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/directive.js"></script>
+    <script src='js/service.js'></script>
+</html>

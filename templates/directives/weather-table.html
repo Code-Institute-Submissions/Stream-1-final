@@ -1,0 +1,18 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Date / Time</th>
+            <th>Temp</th>
+            <th>Description</th>
+            <th>Icon</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="weathe in weathers.list">
+            <td>{{weathe.dt_txt | date}}</td>
+            <td>{{weathe.main.temp_max}}</td>
+            <td>{{weathe.weather[0].description}}</td>
+            <td><img src="http://openweathermap.org/img/w/{{weathe.weather[0].icon}}.png" alt="{{weathe.weather[0].description}}"/></td>
+        </tr>
+    </tbody>
+</table>

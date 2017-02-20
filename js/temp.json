@@ -1,0 +1,14 @@
+[
+{"month":"Jan","tempC":11,"tempF":52,"highC":16,"hignF":61,"rainMM":23,"sunHrs":6,"SeaTempC":14,"SeaTempF":57},
+{"month":"Feb","tempC":12,"tempF":54,"highC":17,"hignF":63,"rainMM":23,"sunHrs":7,"SeaTempC":14,"SeaTempF":57},
+{"month":"Mar","tempC":15,"tempF":59,"highC":19,"hignF":66,"rainMM":15,"sunHrs":7,"SeaTempC":14,"SeaTempF":57},
+{"month":"Apr","tempC":17,"tempF":63,"highC":21,"hignF":70,"rainMM":21,"sunHrs":9,"SeaTempC":15,"SeaTempF":59},
+{"month":"May","tempC":20,"tempF":68,"highC":24,"hignF":75,"rainMM":30,"sunHrs":10,"SeaTempC":17,"SeaTempF":63},
+{"month":"Jun","tempC":25,"tempF":77,"highC":27,"hignF":81,"rainMM":10,"sunHrs":11,"SeaTempC":20,"SeaTempF":68},
+{"month":"Jul","tempC":27,"tempF":81,"highC":31,"hignF":88,"rainMM":6,"sunHrs":12,"SeaTempC":24,"SeaTempF":75},
+{"month":"Aug","tempC":29,"tempF":84,"highC":32,"hignF":90,"rainMM":6,"sunHrs":11,"SeaTempC":25,"SeaTempF":77},
+{"month":"Sep","tempC":25,"tempF":77,"highC":28,"hignF":82,"rainMM":39,"sunHrs":9,"SeaTempC":24,"SeaTempF":75},
+{"month":"Oct","tempC":21,"tempF":70,"highC":25,"hignF":77,"rainMM":39,"sunHrs":7,"SeaTempC":21,"SeaTempF":70},
+{"month":"Nov","tempC":16,"tempF":61,"highC":19,"hignF":66,"rainMM":42,"sunHrs":6,"SeaTempC":18,"SeaTempF":64},
+{"month":"Dec","tempC":12,"tempF":54,"highC":17,"hignF":63,"rainMM":25,"sunHrs":6,"SeaTempC":15,"SeaTempF":59}
+]

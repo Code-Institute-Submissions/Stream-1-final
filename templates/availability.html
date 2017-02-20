@@ -1,0 +1,249 @@
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<script src='js/calendar/moment.min.js'></script>
+<script src='js/calendar/fullcalendar.min.js'></script>
+<script src='js/calendar/gcal.js'></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({   
+            //googleCalendarApiKey: 'AIzaSyDs8ldPAzJ8XwHlCoIiITVvb-J3dIZKmUY',
+            
+            googleCalendarApiKey: 'AIzaSyDy4L8f1AMz49DEbNYrsJkn5Jr18lJRDhg',
+            events: {
+                //googleCalendarId: 'arnold-j83@sky.com'
+                googleCalendarId: 'catkin.order@gmail.com'
+            },
+            eventClick: function(event) {
+                // opens events in a popup window
+                window.open(event.url, 'gcalevent', 'width=500,height=300');
+                return false;
+            },
+            
+            loading: function(bool) {
+                $('#loading').toggle(bool);
+            }
+            
+        });
+       
+    });
+</script>
+<div class="jumbotron hero7  container">
+ <h1 class="heroh1">Apartment Brisas</h1>
+ <h2 class="heroh2">Availability and Booking</h2>
+</div>
+<div class="container">
+	<div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <h2>Enquire about Availability</h2>
+                <p>Apartment Brisas is available throughout the year, the calender below will show you when apartment brisas is available / booked.</p>
+                <div class="container">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12 text-center">
+                <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#enquiry-modal">Make an Enquiery</button>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="enquiry-form-modal" aria-hidden="true">
+<!-- Bootstrap modal popup which includes the angular form-->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="todo-form-header">Enquiry Form</h2>
+            </div>
+            <div class="modal-body">
+            	<form class="viewType" name="register_form" novalidate data-ng-submit="registerForm()">
+                    <fieldset>
+                    	<div class="row">
+		                    <div class="col-md-4">
+		                        <label>Your Title</label>
+		                    </div>
+		                    <div class="col-md-8">
+		                        <select data-ng-model="register.selectedTitle" name="selectedTitle" class="form-control">
+		                            <option  ng-repeat="title in titles" >{{title}}</option>
+		                            <!--titles added to &$scope in the controller-->
+		                        </select>
+		                    </div>
+                    	</div>
+                    	<br />
+                    	<div class="row">
+                    		<div class="col-md-4">
+                        		<label>Your Full Name</label>
+                    		</div>
+                    		<div class="col-md-8">
+                        		<input class="form-control" type="text" placeholder="Enter Your Name" name="fullname" data-ng-model="register.fullname" data-ng-minlength=3 data-ng-maxlength=100 required  />
+                        		<p data-ng-show="register_form.fullname.$pristine" class="help-block">Your Full Name is Required</p>
+                    		</div>
+	                    	<div class="col-md-12 error-container" ng-show="register_form.fullname.$dirty 
+                                                        && register_form.fullname.$invalid 
+                                                        && submitted">
+                    		<label style='color: red'>Error:</label>
+                    		<p class="error" ng-show="register_form.fullname.$error.required">Please input your name</p>
+                    		<p class="error" ng-show="register_form.fullname.$error.minlength">Your name is required to be at least 3 characters</p>
+                    		<p class="error" ng-show="register_form.fullname.$error.maxlength">Your name cannot be longer than 50 characters</p>
+                    		</div>
+                		</div>
+                		<br />
+                		<div class="row">
+                    		<div class="col-md-4">
+                        		<label>Your Email Address</label>
+                    		</div>
+                    		<div class="col-md-8">
+                        		<input class="form-control" type="email" placeholder="Enter email address" name="email" 
+                        ng-model="register.email" ng-minlength=5 ng-maxlength=40  required  />
+                    		</div>
+                		</div>
+                		<br />
+                		<div class="row">
+                    		<div class="col-md-12 error-container" ng-show="register_form.email.$dirty 
+                                                        && register_form.email.$invalid 
+                                                        && submitted">
+			                    <!--add error messages for email-->
+			                    <label style='color: red'>Error:</label>
+			                    <p class="error" ng-show="register_form.email.$error.required">Please input an email</p>
+			                    <p class="error" ng-show="register_form.email.$error.minlength">Your email is required to be at least 5 characters</p>
+			                    <p class="error" ng-show="register_form.email.$error.maxlength">Your email cannot be longer than 40 characters</p>
+			                    <p class="error" ng-show="register_form.email.$error.email">That is not a valid email. Please input a valid email.</p>
+			                </div>
+                		</div>
+                
+                		<div class="row">
+                    		<div class="col-md-4">
+                    			<label>Your Telephone Number</label>
+                    		</div>
+	                    	<div class="col-md-8">
+	                        	<input class="form-control" type="number" placeholder="Enter your telephone number" name="telNumber" 
+	                        ng-model="register.telNumber" ng-minlength=10 ng-maxlength=15 required  />
+	                    	</div>
+                		</div>
+                		<div class="row">
+                    		<div class="col-md-12 error-container" ng-show="register_form.telNumber.$dirty 
+                                                        && register_form.telNumber.$invalid 
+                                                        && submitted">
+			                    <label style='color: red'>Error:</label>
+			                    <p class="error" ng-show="register_form.telNumber.$error.required">Please input your phone number</p>
+			                    <p class="error" ng-show="register_form.telNumber.$error.minlength">Telepone Numberis required to be at least 10 characters</p>
+			                    <p class="error" ng-show="register_form.telNumber.$error.maxlength">Telepone Number cannot be longer than 15 characters</p>
+			                    <p class="error" ng-show="register_form.telNumber.$error.number">That is not a number. Please input a valid telephone number.</p>
+                    		</div>
+                		</div>
+                		<br />
+                		<div class="row">
+		                    <div class="col-md-4">
+		                        <label>Date from:</label>
+		                    </div>
+                    		<div class="col-md-8">
+		                        <select ng-model="register.dateFrom" name="dateFrom" class="form-control" required>
+		                            <option class="form-control" ng-repeat="datefrom in datesfrom" >{{datefrom}}</option>
+		                        </select>
+                    		</div>
+                		</div>
+                		<div class="row">
+                    		<div class="col-md-12 error-container" ng-show="register_form.dateFrom.$dirty 
+                                                        && register_form.dateFrom.$invalid 
+                                                        && submitted">
+			                    <label style='color: red'>Error:</label>
+			                    <p class="error" ng-show="register_form.dateFrom.$error.required">Please indicate date from</p>
+			                    <p class="error" ng-show="register_form.dateFrom.$error.date">Please enter a valid date</p>
+                    		</div>
+                		</div>
+                		<br />
+		                <div class="row">
+		                    <div class="col-md-4">
+		                        <label>Date to:</label>
+		                    </div>
+		                    <div class="col-md-8">
+		                       
+		                        <select ng-model="register.dateTo" name="dateTo" class="form-control" required>
+		                            <option class="form-control" ng-repeat="datefrom in datesfrom" >{{datefrom}}</option>
+		                        </select>
+		                    </div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-12 error-container" ng-show="register_form.dateTo.$dirty 
+		                                                        && register_form.dateTo.$invalid 
+		                                                        && submitted">
+			                    <label style='color: red'>Error:</label>
+			                    <p class="error" ng-show="register_form.dateTo.$error.required">Please indicate date to</p>
+			                    <p class="error" ng-show="register_form.dateTo.$error.date">Please enter a valid date</p>
+		                    </div>
+		                </div>
+		                <br />
+		                <div class="row">
+		                    <div class="col-md-4">
+		                        <label>Number of Adults</label>
+		                    </div>
+		                    <div class="col-md-8">
+		                        <select ng-model="register.selectedAdults" name="selectedAdults" class="form-control" required>
+		                            <option class="form-control" ng-repeat="adult in adults" >{{adult}}</option>
+		                        </select>
+		                    </div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-12 error-container" ng-show="register_form.selectedAdults.$dirty 
+		                                                        && register_form.selectedAdults.$invalid 
+		                                                        && submitted">
+			                    <label style='color: red'>Error:</label>
+			                    <p class="error" ng-show="register_form.selectedAdults.$error.required">Please indicate number of Adults</p>
+			                </div>
+		                </div>
+                   		<br />
+                		<div class="row">
+                    		<div class="col-md-4">
+                        		<label>Number of Children</label>
+                    		</div>
+                    		<div class="col-md-8">
+                        		<select ng-model="register.selectedChildren" name="selectedChildren" class="form-control" required>
+                            		<option class="form-control" ng-repeat="child in children" >{{child}}</option>
+                        		</select>
+                    		</div>
+                    	</div>
+                    	<div class="row">
+                        	<div class="col-md-12 error-container" ng-show="register_form.selectedChildren.$dirty 
+                                                            && register_form.selectedChildren.$invalid 
+                                                            && submitted">
+                        	<label style='color: red'>Error:</label>
+                        	<p class="error" ng-show="register_form.selectedChildren.$error.required">Please indicate number of Children</p>
+                        	</div>
+                    	</div>
+                    	<br />
+
+                    	<div class="row">
+                        <div class="modal-footer">
+                            <label ng-show="labShow" ng-model="labShow">Thank you, your enquiry has been sent :)</label>
+                            <a href="http://arnoldj-rest.herokuapp.com/enqs/" ng-show="enq_link_show" ng-model="enq_link_show">See all Enquiries Sent</a>
+                            <label ng-show="labAlreadyBooked" ng-model="labAlreadyBooked">{{alreadyBooked}}</label>
+                            <button type="submit" class="btn btn-primary" id="submitButton" ng-disabled="isDisabled" ng-model="isDisabled" >Submit Enquiry</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                    <br />
+                    <!--This section displays the information entered into the form-->
+                        <div class="col-md-12" id="form_data">
+                        <p>Your Name: {{register.selectedTitle}} {{register.fullname}}</p>
+                        <p>Your Email Address: {{register.email}}</p>
+                        <p>Your Telephone Number: {{register.telNumber}}</p>
+                        <p>Date From: {{register.dateFrom}}</p>
+                        <p>Date To: {{register.dateTo}}</p>
+                        <p>Number of Adults: {{register.selectedAdults}}</p>
+                        <p>Number of Children: {{register.selectedChildren}}</p>
+                        </div>
+                    </div> 
+                    </fieldset>
+                </form>    
+            </div>
+        </div>
+    </div>
+</div>
