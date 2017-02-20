@@ -36,7 +36,7 @@ angular.module('stream1Controllers',[])
 
   .controller('pricesController', function($scope, MyService) {
     $scope.title = "Prices";
-    var URL = "/js/price.json";
+    var URL = "js/price.json";
 
     $scope.prices = {}; 
     MyService.getPrice(URL).then(function(results) {
