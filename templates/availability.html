@@ -143,8 +143,8 @@
 		                        <label>Date from:</label>
 		                    </div>
                     		<div class="col-md-8">
-		                        <select ng-model="register.dateFrom" name="dateFrom" class="form-control" required>
-		                            <option ng-repeat="datefrom in datesfrom" >{{datefrom}}</option>
+		                        <select ng-model="register.dateFrom" name="dateFrom" class="form-control mobileSelect" data-style="primary" required>
+		                            <option ng-repeat="datefrom in datesfrom" value="{{datefrom}}">{{datefrom}}</option>
 		                        </select>
                     		</div>
                 		</div>
@@ -164,8 +164,8 @@
 		                    </div>
 		                    <div class="col-md-8">
 		                       
-		                        <select ng-model="register.dateTo" name="dateTo" class="form-control" required>
-		                            <option ng-repeat="datefrom in datesfrom" >{{datefrom}}</option>
+		                        <select ng-model="register.dateTo" name="dateTo" class="form-control mobileSelect" data-style="success" required>
+		                            <option ng-repeat="datefrom in datesfrom" value="{{datefrom}}">{{datefrom}}</option>
 		                        </select>
 		                    </div>
 		                </div>
@@ -184,7 +184,7 @@
 		                        <label>Number of Adults</label>
 		                    </div>
 		                    <div class="col-md-8">
-		                        <select ng-model="register.selectedAdults" name="selectedAdults" class="form-control" required>
+		                        <select ng-model="register.selectedAdults" name="selectedAdults" class="form-control mobileSelect" data-style="info" required>
 		                            <option ng-repeat="adult in adults" >{{adult}}</option>
 		                        </select>
 		                    </div>
@@ -203,7 +203,7 @@
                         		<label>Number of Children</label>
                     		</div>
                     		<div class="col-md-8">
-                        		<select ng-model="register.selectedChildren" name="selectedChildren" class="form-control" required>
+                        		<select ng-model="register.selectedChildren" name="selectedChildren" class="form-control mobileSelect" data-style="warning" required>
                             		<option ng-repeat="child in children" >{{child}}</option>
                         		</select>
                     		</div>
