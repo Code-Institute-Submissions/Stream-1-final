@@ -3,7 +3,8 @@
 ## Overview
  
 This is an Angular.JS Website for a rental property in Spain.  
- 
+## The Website is Deployed Using Github-Pages
+-[https://arnold-j83.github.io/Stream-1-final] (https://arnold-j83.github.io/Stream-1-final)
  
 ### Some the tech used includes:
 - [AngularJS](https://angularjs.org/)

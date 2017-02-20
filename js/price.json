@@ -5,4 +5,5 @@
 {"people": 4, "period":"Summer 2016","from":"1 Jun 2016","to":"31 Aug 2016","PriceWeek":225,"PriceNight":35,"PriceNightWE":35,"MinStay":"Flexible"},
 {"people": 4, "period":"Autumn 2016","from":"1 Sept 2016","to":"30 Nov 2016","PriceWeek":190,"PriceNight":35,"PriceNightWE":35,"MinStay":"Flexible"},
 {"people": 4, "period":"Winter 2017","from":"1 Dec 2016","to":"31 Mar 2017","PriceWeek":135,"PriceNight":30,"PriceNightWE":30,"MinStay":"Flexible"}
+
 ]
