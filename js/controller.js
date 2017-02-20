@@ -207,7 +207,7 @@ angular.module('stream1Controllers',[])
 
   .controller('weatherController', function($scope, MyService) {
     $scope.title = "Weather";
-    var URL = "http://api.openweathermap.org/data/2.5/forecast/city?q=alicante&APPID=4dd1460040170cc990568caae91e18ca&units=metric";
+    var URL = "//api.openweathermap.org/data/2.5/forecast/city?q=alicante&APPID=4dd1460040170cc990568caae91e18ca&units=metric";
     $scope.weathers = {};
     MyService.getPrice(URL).then(function(results) {
       $scope.weathers = results.data;
