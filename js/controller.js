@@ -183,8 +183,8 @@ angular.module('stream1Controllers',[])
               $scope.Enq.fullname = $scope.register.fullname;
               $scope.Enq.emailaddress = $scope.register.email;
               $scope.Enq.telephone = $scope.register.telNumber;
-              $scope.Enq.datefrom = dateFrom;//$scope.register.dateFrom;
-              $scope.Enq.dateto = dateTo; //$scope.register.dateTo;
+              $scope.Enq.datefrom = $scope.register.dateFrom;
+              $scope.Enq.dateto = $scope.register.dateTo;
               $scope.Enq.numberofadults = $scope.register.selectedAdults;
               $scope.Enq.numberofchildren = $scope.register.selectedChildren;
               $scope.labShow = false;
@@ -193,6 +193,8 @@ angular.module('stream1Controllers',[])
                 console.log("ENQ Complete");
                 $scope.isDisabled = true;
                 $scope.labShow = true;
+                $scope.alreadyBooked = "";
+                $scope.labAlreadyBooked = false;
                 //$scope.enq_link_show = true;
               }).catch(function(err) {
                 console.log("something went wrong");
