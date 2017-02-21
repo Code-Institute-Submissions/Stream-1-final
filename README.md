@@ -32,7 +32,8 @@ This is an Angular.JS Website for a rental property in Spain.
 #Availability
 (https://arnold-j83.github.io/Stream-1-final/#/availability) Shows a calendar view of the Apartment availability using the FullCalendar JavaScript Library (https://fullcalendar.io/).  This page also features an Angular.js form to make enquiries.   This form appears in a modal window, and includes angular validation.  This form also uses the Google Maps API to create an array of dates when the Apartment is booked.  The form will check that the Apartment is Available for the dates that the user is enquiring about.  If the Apartment is Booked on any of the enquiry dates, then a message is returned top the user.  If the dates are available, and all other form element are valid, then the form will submit to A Python-Django Rest API (http://arnoldj-rest.herokuapp.com/enqs/)
 
-#Weather (https://arnold-j83.github.io/Stream-1-final/#/weather) Displays a D3.js chart of average temperatures for the region.  This page was also intended to feature realtime weather forcasts from an API, however, the API was http and not https causing mixed content errors.
+#Weather 
+(https://arnold-j83.github.io/Stream-1-final/#/weather) Displays a D3.js chart of average temperatures for the region.  This page was also intended to feature realtime weather forcasts from an API, however, the API was http and not https causing mixed content errors.
 
 ## Contributing
  
