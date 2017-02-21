@@ -141,7 +141,7 @@ angular.module('stream1Controllers',[])
     $scope.datesfrom = myArray;
     $scope.adults = [1,2,3,4,5,6];
     $scope.children = [0,1,2,3,4,5,6];
-    var URL = "http://arnoldj-rest.herokuapp.com/enqs/";
+    var URL = "https://arnoldj-rest.herokuapp.com/enqs/";
     $scope.Enq = {};
     $scope.registerForm = function() {
       var dateFrom = $scope.register.dateFrom;
